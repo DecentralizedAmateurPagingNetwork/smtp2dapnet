@@ -24,7 +24,7 @@ class CustomSMTPServer(smtpd.SMTPServer):
         headers=Parser().parsestr(data)
         text = headers['subject']
 
-        url='http://hampager.de:8080/calls'
+        url='http://localhost:8080/calls'
         json_string='''{"text": "''' + text + '''", "callSignNames": ["''' + callsign + '''"], "transmitterGroupNames": ["''' + txgroup  + '''"], "emergency": false}'''
         print(json_string)
         response = requests.post(url, data=json_string, auth=HTTPBasicAuth(login, passwd))
