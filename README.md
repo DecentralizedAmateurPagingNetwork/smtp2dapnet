@@ -1,5 +1,6 @@
 # smtp2dapnet
 SMPT Interface via REST API to DAPNET
+
 Ralf Wilke, DH3WR
 
 This little python script implements an SMTP server, which listens on the desired port for emails to send them out via the REST API of DAPNET to the user.
